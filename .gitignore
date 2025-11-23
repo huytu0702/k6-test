@@ -1,6 +1,5 @@
 # K6 binary
 k6.zip
-k6-v*/
 
 # Node modules (if using)
 node_modules/
