@@ -1,0 +1,59 @@
+{
+  "pets": [
+    {
+      "id": 10001,
+      "name": "Buddy",
+      "status": "available",
+      "category": {
+        "id": 1,
+        "name": "Dogs"
+      },
+      "photoUrls": ["https://example.com/buddy.jpg"],
+      "tags": [{"id": 1, "name": "friendly"}]
+    },
+    {
+      "id": 10002,
+      "name": "Whiskers",
+      "status": "available",
+      "category": {
+        "id": 2,
+        "name": "Cats"
+      },
+      "photoUrls": ["https://example.com/whiskers.jpg"],
+      "tags": [{"id": 2, "name": "playful"}]
+    },
+    {
+      "id": 10003,
+      "name": "Tweety",
+      "status": "pending",
+      "category": {
+        "id": 3,
+        "name": "Birds"
+      },
+      "photoUrls": ["https://example.com/tweety.jpg"],
+      "tags": [{"id": 3, "name": "vocal"}]
+    },
+    {
+      "id": 10004,
+      "name": "Nemo",
+      "status": "sold",
+      "category": {
+        "id": 4,
+        "name": "Fish"
+      },
+      "photoUrls": ["https://example.com/nemo.jpg"],
+      "tags": [{"id": 4, "name": "colorful"}]
+    },
+    {
+      "id": 10005,
+      "name": "Thumper",
+      "status": "available",
+      "category": {
+        "id": 5,
+        "name": "Rabbits"
+      },
+      "photoUrls": ["https://example.com/thumper.jpg"],
+      "tags": [{"id": 5, "name": "energetic"}]
+    }
+  ]
+}

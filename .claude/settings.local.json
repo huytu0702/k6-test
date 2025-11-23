@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(./k6-v0.52.0-windows-amd64/k6.exe run:*)",
+      "Bash(node utils/generate-report.js:*)",
+      "Bash(tree:*)",
+      "Bash(node utils/aggregate-results.js:*)",
+      "Bash(K6_CLOUD_TOKEN=\"your_token_here\" ./k6-v0.52.0-windows-amd64/k6.exe run --out cloud scripts/load-test-cloud.js)",
+      "Bash(K6_CLOUD_HOST=\"https://app.k6.io\" K6_CLOUD_TOKEN=\"your_token_here\" ./k6-v0.52.0-windows-amd64/k6.exe run:*)",
+      "Bash(dir)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

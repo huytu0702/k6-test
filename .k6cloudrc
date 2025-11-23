@@ -1,0 +1,4 @@
+# K6 Cloud Configuration
+# Token for stack-1400582-alloy-k6
+# K6_CLOUD_TOKEN=your_token_here
+# K6_CLOUD_HOST=https://app.k6.io

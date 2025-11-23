@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "id": 20001,
+      "username": "john_doe",
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john.doe@example.com",
+      "password": "password123",
+      "phone": "1234567890",
+      "userStatus": 1
+    },
+    {
+      "id": 20002,
+      "username": "jane_smith",
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "email": "jane.smith@example.com",
+      "password": "securepass456",
+      "phone": "9876543210",
+      "userStatus": 1
+    },
+    {
+      "id": 20003,
+      "username": "bob_wilson",
+      "firstName": "Bob",
+      "lastName": "Wilson",
+      "email": "bob.wilson@example.com",
+      "password": "bobpass789",
+      "phone": "5551234567",
+      "userStatus": 0
+    },
+    {
+      "id": 20004,
+      "username": "alice_brown",
+      "firstName": "Alice",
+      "lastName": "Brown",
+      "email": "alice.brown@example.com",
+      "password": "alicepass321",
+      "phone": "5559876543",
+      "userStatus": 1
+    },
+    {
+      "id": 20005,
+      "username": "charlie_davis",
+      "firstName": "Charlie",
+      "lastName": "Davis",
+      "email": "charlie.davis@example.com",
+      "password": "charlie999",
+      "phone": "5555555555",
+      "userStatus": 1
+    }
+  ]
+}
