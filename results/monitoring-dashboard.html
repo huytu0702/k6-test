@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -102,7 +103,8 @@
       border-collapse: collapse;
     }
 
-    th, td {
+    th,
+    td {
       padding: 12px;
       text-align: left;
       border-bottom: 1px solid #f0f0f0;
@@ -181,11 +183,11 @@
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <div class="header">
       <h1>🚀 K6 Performance Monitoring Dashboard</h1>
-      <div class="timestamp">Generated: 11/24/2025, 2:11:05 AM</div>
     </div>
 
     <div class="stats-grid">
@@ -231,73 +233,73 @@
           </tr>
         </thead>
         <tbody>
-          
-            <tr>
-              <td><strong>auth-test</strong></td>
-              <td>426</td>
-              <td class="success">0.00%</td>
-              <td>260.14ms</td>
-              <td>278.44ms</td>
-              <td class="success">100.00%</td>
-              <td>5</td>
-              <td>7.10 req/s</td>
-            </tr>
-          
-            <tr>
-              <td><strong>data-driven</strong></td>
-              <td>195</td>
-              <td class="success">0.00%</td>
-              <td>278.34ms</td>
-              <td>472.73ms</td>
-              <td class="success">100.00%</td>
-              <td>5</td>
-              <td>3.25 req/s</td>
-            </tr>
-          
-            <tr>
-              <td><strong>load-test</strong></td>
-              <td>1,069</td>
-              <td class="error">48.18%</td>
-              <td>255.06ms</td>
-              <td>275.85ms</td>
-              <td class="warning">75.91%</td>
-              <td>10</td>
-              <td>17.82 req/s</td>
-            </tr>
-          
-            <tr>
-              <td><strong>spike-test</strong></td>
-              <td>3,191</td>
-              <td class="error">63.93%</td>
-              <td>257.24ms</td>
-              <td>278.29ms</td>
-              <td class="success">100.00%</td>
-              <td>30</td>
-              <td>53.18 req/s</td>
-            </tr>
-          
-            <tr>
-              <td><strong>stress-test</strong></td>
-              <td>3,539</td>
-              <td class="error">54.11%</td>
-              <td>253.70ms</td>
-              <td>278.06ms</td>
-              <td class="success">100.00%</td>
-              <td>20</td>
-              <td>58.98 req/s</td>
-            </tr>
-          
-            <tr>
-              <td><strong>workflow-test</strong></td>
-              <td>425</td>
-              <td class="error">20.00%</td>
-              <td>259.45ms</td>
-              <td>278.36ms</td>
-              <td class="success">100.00%</td>
-              <td>5</td>
-              <td>7.08 req/s</td>
-            </tr>
-          
+
+          <tr>
+            <td><strong>auth-test</strong></td>
+            <td>426</td>
+            <td class="success">0.00%</td>
+            <td>260.14ms</td>
+            <td>278.44ms</td>
+            <td class="success">100.00%</td>
+            <td>5</td>
+            <td>7.10 req/s</td>
+          </tr>
+
+          <tr>
+            <td><strong>data-driven</strong></td>
+            <td>195</td>
+            <td class="success">0.00%</td>
+            <td>278.34ms</td>
+            <td>472.73ms</td>
+            <td class="success">100.00%</td>
+            <td>5</td>
+            <td>3.25 req/s</td>
+          </tr>
+
+          <tr>
+            <td><strong>load-test</strong></td>
+            <td>1,069</td>
+            <td class="error">48.18%</td>
+            <td>255.06ms</td>
+            <td>275.85ms</td>
+            <td class="warning">75.91%</td>
+            <td>10</td>
+            <td>17.82 req/s</td>
+          </tr>
+
+          <tr>
+            <td><strong>spike-test</strong></td>
+            <td>3,191</td>
+            <td class="error">63.93%</td>
+            <td>257.24ms</td>
+            <td>278.29ms</td>
+            <td class="success">100.00%</td>
+            <td>30</td>
+            <td>53.18 req/s</td>
+          </tr>
+
+          <tr>
+            <td><strong>stress-test</strong></td>
+            <td>3,539</td>
+            <td class="error">54.11%</td>
+            <td>253.70ms</td>
+            <td>278.06ms</td>
+            <td class="success">100.00%</td>
+            <td>20</td>
+            <td>58.98 req/s</td>
+          </tr>
+
+          <tr>
+            <td><strong>workflow-test</strong></td>
+            <td>425</td>
+            <td class="error">20.00%</td>
+            <td>259.45ms</td>
+            <td>278.36ms</td>
+            <td class="success">100.00%</td>
+            <td>5</td>
+            <td>7.08 req/s</td>
+          </tr>
+
         </tbody>
       </table>
     </div>
@@ -305,83 +307,83 @@
     <div class="section">
       <h2>⚠️ Issues & Alerts</h2>
       <table>
-          <thead>
-            <tr>
-              <th>Severity</th>
-              <th>Test</th>
-              <th>Issue</th>
-              <th>Current Value</th>
-              <th>Threshold</th>
-            </tr>
-          </thead>
-          <tbody>
-            
-              <tr>
-                <td><span class="issue-badge issue-LOW">LOW</span></td>
-                <td>auth-test</td>
-                <td>Low Throughput</td>
-                <td><strong>7.10 req/s</strong></td>
-                <td>10 req/s</td>
-              </tr>
-            
-              <tr>
-                <td><span class="issue-badge issue-LOW">LOW</span></td>
-                <td>data-driven</td>
-                <td>Low Throughput</td>
-                <td><strong>3.25 req/s</strong></td>
-                <td>10 req/s</td>
-              </tr>
-            
-              <tr>
-                <td><span class="issue-badge issue-HIGH">HIGH</span></td>
-                <td>load-test</td>
-                <td>High Error Rate</td>
-                <td><strong>48.18%</strong></td>
-                <td>5%</td>
-              </tr>
-            
-              <tr>
-                <td><span class="issue-badge issue-HIGH">HIGH</span></td>
-                <td>load-test</td>
-                <td>Low Checks Pass Rate</td>
-                <td><strong>75.91%</strong></td>
-                <td>90%</td>
-              </tr>
-            
-              <tr>
-                <td><span class="issue-badge issue-HIGH">HIGH</span></td>
-                <td>spike-test</td>
-                <td>High Error Rate</td>
-                <td><strong>63.93%</strong></td>
-                <td>5%</td>
-              </tr>
-            
-              <tr>
-                <td><span class="issue-badge issue-HIGH">HIGH</span></td>
-                <td>stress-test</td>
-                <td>High Error Rate</td>
-                <td><strong>54.11%</strong></td>
-                <td>5%</td>
-              </tr>
-            
-              <tr>
-                <td><span class="issue-badge issue-HIGH">HIGH</span></td>
-                <td>workflow-test</td>
-                <td>High Error Rate</td>
-                <td><strong>20.00%</strong></td>
-                <td>5%</td>
-              </tr>
-            
-              <tr>
-                <td><span class="issue-badge issue-LOW">LOW</span></td>
-                <td>workflow-test</td>
-                <td>Low Throughput</td>
-                <td><strong>7.08 req/s</strong></td>
-                <td>10 req/s</td>
-              </tr>
-            
-          </tbody>
-        </table>
+        <thead>
+          <tr>
+            <th>Severity</th>
+            <th>Test</th>
+            <th>Issue</th>
+            <th>Current Value</th>
+            <th>Threshold</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td><span class="issue-badge issue-LOW">LOW</span></td>
+            <td>auth-test</td>
+            <td>Low Throughput</td>
+            <td><strong>7.10 req/s</strong></td>
+            <td>10 req/s</td>
+          </tr>
+
+          <tr>
+            <td><span class="issue-badge issue-LOW">LOW</span></td>
+            <td>data-driven</td>
+            <td>Low Throughput</td>
+            <td><strong>3.25 req/s</strong></td>
+            <td>10 req/s</td>
+          </tr>
+
+          <tr>
+            <td><span class="issue-badge issue-HIGH">HIGH</span></td>
+            <td>load-test</td>
+            <td>High Error Rate</td>
+            <td><strong>48.18%</strong></td>
+            <td>5%</td>
+          </tr>
+
+          <tr>
+            <td><span class="issue-badge issue-HIGH">HIGH</span></td>
+            <td>load-test</td>
+            <td>Low Checks Pass Rate</td>
+            <td><strong>75.91%</strong></td>
+            <td>90%</td>
+          </tr>
+
+          <tr>
+            <td><span class="issue-badge issue-HIGH">HIGH</span></td>
+            <td>spike-test</td>
+            <td>High Error Rate</td>
+            <td><strong>63.93%</strong></td>
+            <td>5%</td>
+          </tr>
+
+          <tr>
+            <td><span class="issue-badge issue-HIGH">HIGH</span></td>
+            <td>stress-test</td>
+            <td>High Error Rate</td>
+            <td><strong>54.11%</strong></td>
+            <td>5%</td>
+          </tr>
+
+          <tr>
+            <td><span class="issue-badge issue-HIGH">HIGH</span></td>
+            <td>workflow-test</td>
+            <td>High Error Rate</td>
+            <td><strong>20.00%</strong></td>
+            <td>5%</td>
+          </tr>
+
+          <tr>
+            <td><span class="issue-badge issue-LOW">LOW</span></td>
+            <td>workflow-test</td>
+            <td>Low Throughput</td>
+            <td><strong>7.08 req/s</strong></td>
+            <td>10 req/s</td>
+          </tr>
+
+        </tbody>
+      </table>
     </div>
 
     <div class="footer">
@@ -390,4 +392,5 @@
     </div>
   </div>
 </body>
+
 </html>

@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,26 +11,30 @@
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
       background: #f5f7fa;
       padding: 20px;
       line-height: 1.6;
     }
+
     .container {
       max-width: 1200px;
       margin: 0 auto;
       background: white;
       border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       padding: 30px;
     }
+
     h1 {
       color: #2c3e50;
       margin-bottom: 10px;
       border-bottom: 3px solid #3498db;
       padding-bottom: 10px;
     }
+
     h2 {
       color: #34495e;
       margin-top: 30px;
@@ -39,28 +43,34 @@
       background: #ecf0f1;
       border-left: 4px solid #3498db;
     }
+
     .summary {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;
       margin-bottom: 30px;
     }
+
     .card {
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       padding: 20px;
       border-radius: 8px;
       color: white;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
+
     .card.success {
       background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
     }
+
     .card.warning {
       background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
     }
+
     .card.info {
       background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
     }
+
     .card-title {
       font-size: 14px;
       opacity: 0.9;
@@ -68,21 +78,25 @@
       text-transform: uppercase;
       letter-spacing: 1px;
     }
+
     .card-value {
       font-size: 32px;
       font-weight: bold;
     }
+
     .card-subtitle {
       font-size: 12px;
       opacity: 0.8;
       margin-top: 5px;
     }
+
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 15px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     }
+
     th {
       background: #34495e;
       color: white;
@@ -90,21 +104,26 @@
       text-align: left;
       font-weight: 600;
     }
+
     td {
       padding: 12px;
       border-bottom: 1px solid #ecf0f1;
     }
+
     tr:hover {
       background: #f8f9fa;
     }
+
     .metric-name {
       font-weight: 600;
       color: #2c3e50;
     }
+
     .metric-value {
       color: #7f8c8d;
       font-family: 'Courier New', monospace;
     }
+
     .footer {
       margin-top: 30px;
       text-align: center;
@@ -115,10 +134,10 @@
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <h1>K6 Performance Test Report</h1>
-    <p style="color: #7f8c8d; margin-bottom: 20px;">Generated: 11/24/2025, 2:53:51 AM</p>
 
     <div class="summary">
       <div class="card info">
@@ -160,46 +179,46 @@
         </tr>
       </thead>
       <tbody>
-        
-    <tr>
-      <td class="metric-name">Request Duration</td>
-      <td class="metric-value">255ms</td>
-      <td class="metric-value">227ms</td>
-      <td class="metric-value">245ms</td>
-      <td class="metric-value">275ms</td>
-      <td class="metric-value">276ms</td>
-      <td class="metric-value">302ms</td>
-    </tr>
-        
-    <tr>
-      <td class="metric-name">Request Waiting</td>
-      <td class="metric-value">254ms</td>
-      <td class="metric-value">227ms</td>
-      <td class="metric-value">244ms</td>
-      <td class="metric-value">274ms</td>
-      <td class="metric-value">275ms</td>
-      <td class="metric-value">301ms</td>
-    </tr>
-        
-    <tr>
-      <td class="metric-name">Request Blocked</td>
-      <td class="metric-value">7ms</td>
-      <td class="metric-value">0ms</td>
-      <td class="metric-value">0ms</td>
-      <td class="metric-value">0ms</td>
-      <td class="metric-value">0ms</td>
-      <td class="metric-value">834ms</td>
-    </tr>
-        
-    <tr>
-      <td class="metric-name">Request Connecting</td>
-      <td class="metric-value">2ms</td>
-      <td class="metric-value">0ms</td>
-      <td class="metric-value">0ms</td>
-      <td class="metric-value">0ms</td>
-      <td class="metric-value">0ms</td>
-      <td class="metric-value">277ms</td>
-    </tr>
+
+        <tr>
+          <td class="metric-name">Request Duration</td>
+          <td class="metric-value">255ms</td>
+          <td class="metric-value">227ms</td>
+          <td class="metric-value">245ms</td>
+          <td class="metric-value">275ms</td>
+          <td class="metric-value">276ms</td>
+          <td class="metric-value">302ms</td>
+        </tr>
+
+        <tr>
+          <td class="metric-name">Request Waiting</td>
+          <td class="metric-value">254ms</td>
+          <td class="metric-value">227ms</td>
+          <td class="metric-value">244ms</td>
+          <td class="metric-value">274ms</td>
+          <td class="metric-value">275ms</td>
+          <td class="metric-value">301ms</td>
+        </tr>
+
+        <tr>
+          <td class="metric-name">Request Blocked</td>
+          <td class="metric-value">7ms</td>
+          <td class="metric-value">0ms</td>
+          <td class="metric-value">0ms</td>
+          <td class="metric-value">0ms</td>
+          <td class="metric-value">0ms</td>
+          <td class="metric-value">834ms</td>
+        </tr>
+
+        <tr>
+          <td class="metric-name">Request Connecting</td>
+          <td class="metric-value">2ms</td>
+          <td class="metric-value">0ms</td>
+          <td class="metric-value">0ms</td>
+          <td class="metric-value">0ms</td>
+          <td class="metric-value">0ms</td>
+          <td class="metric-value">277ms</td>
+        </tr>
       </tbody>
     </table>
 
@@ -212,87 +231,87 @@
         </tr>
       </thead>
       <tbody>
-        
-      <tr>
-        <td class="metric-name">vus</td>
-        <td class="metric-value">1</td>
-      </tr>
-      <tr>
-        <td class="metric-name">vus_max</td>
-        <td class="metric-value">10</td>
-      </tr>
-      <tr>
-        <td class="metric-name">http_reqs</td>
-        <td class="metric-value">1069</td>
-      </tr>
-      <tr>
-        <td class="metric-name">http_req_duration</td>
-        <td class="metric-value">255ms</td>
-      </tr>
-      <tr>
-        <td class="metric-name">http_req_blocked</td>
-        <td class="metric-value">7ms</td>
-      </tr>
-      <tr>
-        <td class="metric-name">http_req_connecting</td>
-        <td class="metric-value">2ms</td>
-      </tr>
-      <tr>
-        <td class="metric-name">http_req_tls_handshaking</td>
-        <td class="metric-value">5ms</td>
-      </tr>
-      <tr>
-        <td class="metric-name">http_req_sending</td>
-        <td class="metric-value">0ms</td>
-      </tr>
-      <tr>
-        <td class="metric-name">http_req_waiting</td>
-        <td class="metric-value">254ms</td>
-      </tr>
-      <tr>
-        <td class="metric-name">http_req_receiving</td>
-        <td class="metric-value">1ms</td>
-      </tr>
-      <tr>
-        <td class="metric-name">http_req_failed</td>
-        <td class="metric-value">48.18%</td>
-      </tr>
-      <tr>
-        <td class="metric-name">checks</td>
-        <td class="metric-value">75.91%</td>
-      </tr>
-      <tr>
-        <td class="metric-name">errors</td>
-        <td class="metric-value">48.18%</td>
-      </tr>
-      <tr>
-        <td class="metric-name">pet_get_duration</td>
-        <td class="metric-value">254ms</td>
-      </tr>
-      <tr>
-        <td class="metric-name">data_sent</td>
-        <td class="metric-value">130180</td>
-      </tr>
-      <tr>
-        <td class="metric-name">data_received</td>
-        <td class="metric-value">507804</td>
-      </tr>
-      <tr>
-        <td class="metric-name">iteration_duration</td>
-        <td class="metric-value">1269ms</td>
-      </tr>
-      <tr>
-        <td class="metric-name">iterations</td>
-        <td class="metric-value">1069</td>
-      </tr>
-      <tr>
-        <td class="metric-name">inventory_get_duration</td>
-        <td class="metric-value">257ms</td>
-      </tr>
-      <tr>
-        <td class="metric-name">pet_post_duration</td>
-        <td class="metric-value">255ms</td>
-      </tr>
+
+        <tr>
+          <td class="metric-name">vus</td>
+          <td class="metric-value">1</td>
+        </tr>
+        <tr>
+          <td class="metric-name">vus_max</td>
+          <td class="metric-value">10</td>
+        </tr>
+        <tr>
+          <td class="metric-name">http_reqs</td>
+          <td class="metric-value">1069</td>
+        </tr>
+        <tr>
+          <td class="metric-name">http_req_duration</td>
+          <td class="metric-value">255ms</td>
+        </tr>
+        <tr>
+          <td class="metric-name">http_req_blocked</td>
+          <td class="metric-value">7ms</td>
+        </tr>
+        <tr>
+          <td class="metric-name">http_req_connecting</td>
+          <td class="metric-value">2ms</td>
+        </tr>
+        <tr>
+          <td class="metric-name">http_req_tls_handshaking</td>
+          <td class="metric-value">5ms</td>
+        </tr>
+        <tr>
+          <td class="metric-name">http_req_sending</td>
+          <td class="metric-value">0ms</td>
+        </tr>
+        <tr>
+          <td class="metric-name">http_req_waiting</td>
+          <td class="metric-value">254ms</td>
+        </tr>
+        <tr>
+          <td class="metric-name">http_req_receiving</td>
+          <td class="metric-value">1ms</td>
+        </tr>
+        <tr>
+          <td class="metric-name">http_req_failed</td>
+          <td class="metric-value">48.18%</td>
+        </tr>
+        <tr>
+          <td class="metric-name">checks</td>
+          <td class="metric-value">75.91%</td>
+        </tr>
+        <tr>
+          <td class="metric-name">errors</td>
+          <td class="metric-value">48.18%</td>
+        </tr>
+        <tr>
+          <td class="metric-name">pet_get_duration</td>
+          <td class="metric-value">254ms</td>
+        </tr>
+        <tr>
+          <td class="metric-name">data_sent</td>
+          <td class="metric-value">130180</td>
+        </tr>
+        <tr>
+          <td class="metric-name">data_received</td>
+          <td class="metric-value">507804</td>
+        </tr>
+        <tr>
+          <td class="metric-name">iteration_duration</td>
+          <td class="metric-value">1269ms</td>
+        </tr>
+        <tr>
+          <td class="metric-name">iterations</td>
+          <td class="metric-value">1069</td>
+        </tr>
+        <tr>
+          <td class="metric-name">inventory_get_duration</td>
+          <td class="metric-value">257ms</td>
+        </tr>
+        <tr>
+          <td class="metric-name">pet_post_duration</td>
+          <td class="metric-value">255ms</td>
+        </tr>
       </tbody>
     </table>
 
@@ -302,4 +321,5 @@
     </div>
   </div>
 </body>
+
 </html>
