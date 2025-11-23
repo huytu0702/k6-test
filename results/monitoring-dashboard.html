@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K6 Performance Monitoring Dashboard</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 20px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .header {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .header h1 {
+      color: #667eea;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .header .timestamp {
+      color: #666;
+      font-size: 0.9em;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .stat-card {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .stat-card .label {
+      font-size: 0.9em;
+      color: #666;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .stat-card .value {
+      font-size: 2.5em;
+      font-weight: bold;
+      color: #667eea;
+    }
+
+    .stat-card .unit {
+      font-size: 0.5em;
+      color: #999;
+      margin-left: 5px;
+    }
+
+    .section {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .section h2 {
+      color: #667eea;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #f0f0f0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    th {
+      background: #f8f9fa;
+      color: #667eea;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.85em;
+    }
+
+    tr:hover {
+      background: #f8f9fa;
+    }
+
+    .issue-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.85em;
+      font-weight: 600;
+    }
+
+    .issue-HIGH {
+      background: #fee;
+      color: #c33;
+    }
+
+    .issue-MEDIUM {
+      background: #ffeaa7;
+      color: #d63031;
+    }
+
+    .issue-LOW {
+      background: #dfe6e9;
+      color: #2d3436;
+    }
+
+    .success {
+      color: #00b894;
+      font-weight: bold;
+    }
+
+    .warning {
+      color: #fdcb6e;
+      font-weight: bold;
+    }
+
+    .error {
+      color: #d63031;
+      font-weight: bold;
+    }
+
+    .no-issues {
+      text-align: center;
+      padding: 40px;
+      color: #00b894;
+      font-size: 1.2em;
+    }
+
+    .chart-container {
+      margin: 20px 0;
+      padding: 20px;
+      background: #f8f9fa;
+      border-radius: 8px;
+    }
+
+    .footer {
+      text-align: center;
+      color: white;
+      margin-top: 30px;
+      padding: 20px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🚀 K6 Performance Monitoring Dashboard</h1>
+      <div class="timestamp">Generated: 11/24/2025, 2:11:05 AM</div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="label">Total Tests</div>
+        <div class="value">6</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Total Requests</div>
+        <div class="value">8,845</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Avg Response Time</div>
+        <div class="value">261<span class="unit">ms</span></div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Avg Error Rate</div>
+        <div class="value error">31.04<span class="unit">%</span></div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Avg Checks Pass Rate</div>
+        <div class="value success">96.0<span class="unit">%</span></div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Max Virtual Users</div>
+        <div class="value">30</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>📊 Test Results Comparison</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Test Name</th>
+            <th>Requests</th>
+            <th>Error Rate</th>
+            <th>Avg Response</th>
+            <th>P95 Response</th>
+            <th>Checks Pass</th>
+            <th>Max VUs</th>
+            <th>Throughput</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+            <tr>
+              <td><strong>auth-test</strong></td>
+              <td>426</td>
+              <td class="success">0.00%</td>
+              <td>260.14ms</td>
+              <td>278.44ms</td>
+              <td class="success">100.00%</td>
+              <td>5</td>
+              <td>7.10 req/s</td>
+            </tr>
+          
+            <tr>
+              <td><strong>data-driven</strong></td>
+              <td>195</td>
+              <td class="success">0.00%</td>
+              <td>278.34ms</td>
+              <td>472.73ms</td>
+              <td class="success">100.00%</td>
+              <td>5</td>
+              <td>3.25 req/s</td>
+            </tr>
+          
+            <tr>
+              <td><strong>load-test</strong></td>
+              <td>1,069</td>
+              <td class="error">48.18%</td>
+              <td>255.06ms</td>
+              <td>275.85ms</td>
+              <td class="warning">75.91%</td>
+              <td>10</td>
+              <td>17.82 req/s</td>
+            </tr>
+          
+            <tr>
+              <td><strong>spike-test</strong></td>
+              <td>3,191</td>
+              <td class="error">63.93%</td>
+              <td>257.24ms</td>
+              <td>278.29ms</td>
+              <td class="success">100.00%</td>
+              <td>30</td>
+              <td>53.18 req/s</td>
+            </tr>
+          
+            <tr>
+              <td><strong>stress-test</strong></td>
+              <td>3,539</td>
+              <td class="error">54.11%</td>
+              <td>253.70ms</td>
+              <td>278.06ms</td>
+              <td class="success">100.00%</td>
+              <td>20</td>
+              <td>58.98 req/s</td>
+            </tr>
+          
+            <tr>
+              <td><strong>workflow-test</strong></td>
+              <td>425</td>
+              <td class="error">20.00%</td>
+              <td>259.45ms</td>
+              <td>278.36ms</td>
+              <td class="success">100.00%</td>
+              <td>5</td>
+              <td>7.08 req/s</td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>⚠️ Issues & Alerts</h2>
+      <table>
+          <thead>
+            <tr>
+              <th>Severity</th>
+              <th>Test</th>
+              <th>Issue</th>
+              <th>Current Value</th>
+              <th>Threshold</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td><span class="issue-badge issue-LOW">LOW</span></td>
+                <td>auth-test</td>
+                <td>Low Throughput</td>
+                <td><strong>7.10 req/s</strong></td>
+                <td>10 req/s</td>
+              </tr>
+            
+              <tr>
+                <td><span class="issue-badge issue-LOW">LOW</span></td>
+                <td>data-driven</td>
+                <td>Low Throughput</td>
+                <td><strong>3.25 req/s</strong></td>
+                <td>10 req/s</td>
+              </tr>
+            
+              <tr>
+                <td><span class="issue-badge issue-HIGH">HIGH</span></td>
+                <td>load-test</td>
+                <td>High Error Rate</td>
+                <td><strong>48.18%</strong></td>
+                <td>5%</td>
+              </tr>
+            
+              <tr>
+                <td><span class="issue-badge issue-HIGH">HIGH</span></td>
+                <td>load-test</td>
+                <td>Low Checks Pass Rate</td>
+                <td><strong>75.91%</strong></td>
+                <td>90%</td>
+              </tr>
+            
+              <tr>
+                <td><span class="issue-badge issue-HIGH">HIGH</span></td>
+                <td>spike-test</td>
+                <td>High Error Rate</td>
+                <td><strong>63.93%</strong></td>
+                <td>5%</td>
+              </tr>
+            
+              <tr>
+                <td><span class="issue-badge issue-HIGH">HIGH</span></td>
+                <td>stress-test</td>
+                <td>High Error Rate</td>
+                <td><strong>54.11%</strong></td>
+                <td>5%</td>
+              </tr>
+            
+              <tr>
+                <td><span class="issue-badge issue-HIGH">HIGH</span></td>
+                <td>workflow-test</td>
+                <td>High Error Rate</td>
+                <td><strong>20.00%</strong></td>
+                <td>5%</td>
+              </tr>
+            
+              <tr>
+                <td><span class="issue-badge issue-LOW">LOW</span></td>
+                <td>workflow-test</td>
+                <td>Low Throughput</td>
+                <td><strong>7.08 req/s</strong></td>
+                <td>10 req/s</td>
+              </tr>
+            
+          </tbody>
+        </table>
+    </div>
+
+    <div class="footer">
+      <p>K6 Performance Testing Dashboard | Petstore API Performance Monitoring</p>
+      <p>Powered by K6 + Custom Monitoring Solution</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+{
+  "generatedAt": "2025-11-23T19:13:37.606Z",
+  "totalAlerts": 8,
+  "criticalCount": 6,
+  "warningCount": 2,
+  "infoCount": 0,
+  "alerts": [
+    {
+      "timestamp": "2025-11-23T19:13:37.604Z",
+      "level": "WARNING",
+      "metric": "throughput",
+      "message": "Throughput is below warning threshold",
+      "currentValue": "7.10 req/s",
+      "threshold": "10 req/s",
+      "testName": "auth-test"
+    },
+    {
+      "timestamp": "2025-11-23T19:13:37.605Z",
+      "level": "CRITICAL",
+      "metric": "throughput",
+      "message": "Throughput is critically low",
+      "currentValue": "3.25 req/s",
+      "threshold": "5 req/s",
+      "testName": "data-driven"
+    },
+    {
+      "timestamp": "2025-11-23T19:13:37.605Z",
+      "level": "CRITICAL",
+      "metric": "error_rate",
+      "message": "Error rate is critically high",
+      "currentValue": "48.18%",
+      "threshold": "10%",
+      "testName": "load-test"
+    },
+    {
+      "timestamp": "2025-11-23T19:13:37.605Z",
+      "level": "CRITICAL",
+      "metric": "checks_pass_rate",
+      "message": "Checks pass rate is critically low",
+      "currentValue": "75.91%",
+      "threshold": "80%",
+      "testName": "load-test"
+    },
+    {
+      "timestamp": "2025-11-23T19:13:37.605Z",
+      "level": "CRITICAL",
+      "metric": "error_rate",
+      "message": "Error rate is critically high",
+      "currentValue": "63.93%",
+      "threshold": "10%",
+      "testName": "spike-test"
+    },
+    {
+      "timestamp": "2025-11-23T19:13:37.605Z",
+      "level": "CRITICAL",
+      "metric": "error_rate",
+      "message": "Error rate is critically high",
+      "currentValue": "54.11%",
+      "threshold": "10%",
+      "testName": "stress-test"
+    },
+    {
+      "timestamp": "2025-11-23T19:13:37.605Z",
+      "level": "CRITICAL",
+      "metric": "error_rate",
+      "message": "Error rate is critically high",
+      "currentValue": "20.00%",
+      "threshold": "10%",
+      "testName": "workflow-test"
+    },
+    {
+      "timestamp": "2025-11-23T19:13:37.605Z",
+      "level": "WARNING",
+      "metric": "throughput",
+      "message": "Throughput is below warning threshold",
+      "currentValue": "7.08 req/s",
+      "threshold": "10 req/s",
+      "testName": "workflow-test"
+    }
+  ]
+}

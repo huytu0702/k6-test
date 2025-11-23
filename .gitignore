@@ -1,9 +1,3 @@
-# K6 Test Results
-results/*.json
-results/*.csv
-results/*.html
-results/*.xml
-
 # K6 binary
 k6.zip
 k6-v*/

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K6 Performance Test Report</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: #f5f7fa;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+    }
+
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 10px;
+      border-bottom: 3px solid #3498db;
+      padding-bottom: 10px;
+    }
+
+    h2 {
+      color: #34495e;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      padding: 10px;
+      background: #ecf0f1;
+      border-left: 4px solid #3498db;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 20px;
+      border-radius: 8px;
+      color: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card.success {
+      background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    }
+
+    .card.warning {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    }
+
+    .card.info {
+      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    }
+
+    .card-title {
+      font-size: 14px;
+      opacity: 0.9;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .card-value {
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .card-subtitle {
+      font-size: 12px;
+      opacity: 0.8;
+      margin-top: 5px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    th {
+      background: #34495e;
+      color: white;
+      padding: 12px;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    td {
+      padding: 12px;
+      border-bottom: 1px solid #ecf0f1;
+    }
+
+    tr:hover {
+      background: #f8f9fa;
+    }
+
+    .metric-name {
+      font-weight: 600;
+      color: #2c3e50;
+    }
+
+    .metric-value {
+      color: #7f8c8d;
+      font-family: 'Courier New', monospace;
+    }
+
+    .footer {
+      margin-top: 30px;
+      text-align: center;
+      color: #95a5a6;
+      font-size: 14px;
+      padding-top: 20px;
+      border-top: 1px solid #ecf0f1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>K6 Performance Test Report</h1>
+
+    <div class="summary">
+      <div class="card info">
+        <div class="card-title">Total Requests</div>
+        <div class="card-value">426</div>
+        <div class="card-subtitle">HTTP Requests</div>
+      </div>
+
+      <div class="card success">
+        <div class="card-title">Error Rate</div>
+        <div class="card-value">0.00%</div>
+        <div class="card-subtitle">Failed Requests</div>
+      </div>
+
+      <div class="card success">
+        <div class="card-title">Avg Response Time</div>
+        <div class="card-value">260</div>
+        <div class="card-subtitle">Milliseconds</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Throughput</div>
+        <div class="card-value">3.35</div>
+        <div class="card-subtitle">Requests/second</div>
+      </div>
+    </div>
+
+    <h2>Response Time Metrics</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>Average</th>
+          <th>Minimum</th>
+          <th>Median</th>
+          <th>P90</th>
+          <th>P95</th>
+          <th>Maximum</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="metric-name">Request Duration</td>
+          <td class="metric-value">260ms</td>
+          <td class="metric-value">236ms</td>
+          <td class="metric-value">263ms</td>
+          <td class="metric-value">275ms</td>
+          <td class="metric-value">278ms</td>
+          <td class="metric-value">402ms</td>
+        </tr>
+
+        <tr>
+          <td class="metric-name">Request Waiting</td>
+          <td class="metric-value">260ms</td>
+          <td class="metric-value">236ms</td>
+          <td class="metric-value">263ms</td>
+          <td class="metric-value">275ms</td>
+          <td class="metric-value">278ms</td>
+          <td class="metric-value">402ms</td>
+        </tr>
+
+        <tr>
+          <td class="metric-name">Request Blocked</td>
+          <td class="metric-value">10ms</td>
+          <td class="metric-value">0ms</td>
+          <td class="metric-value">0ms</td>
+          <td class="metric-value">0ms</td>
+          <td class="metric-value">0ms</td>
+          <td class="metric-value">858ms</td>
+        </tr>
+
+        <tr>
+          <td class="metric-name">Request Connecting</td>
+          <td class="metric-value">3ms</td>
+          <td class="metric-value">0ms</td>
+          <td class="metric-value">0ms</td>
+          <td class="metric-value">0ms</td>
+          <td class="metric-value">0ms</td>
+          <td class="metric-value">273ms</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>All Metrics</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Metric Name</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="metric-name">vus</td>
+          <td class="metric-value">1</td>
+        </tr>
+        <tr>
+          <td class="metric-name">vus_max</td>
+          <td class="metric-value">5</td>
+        </tr>
+        <tr>
+          <td class="metric-name">http_reqs</td>
+          <td class="metric-value">426</td>
+        </tr>
+        <tr>
+          <td class="metric-name">http_req_duration</td>
+          <td class="metric-value">260ms</td>
+        </tr>
+        <tr>
+          <td class="metric-name">http_req_blocked</td>
+          <td class="metric-value">10ms</td>
+        </tr>
+        <tr>
+          <td class="metric-name">http_req_connecting</td>
+          <td class="metric-value">3ms</td>
+        </tr>
+        <tr>
+          <td class="metric-name">http_req_tls_handshaking</td>
+          <td class="metric-value">6ms</td>
+        </tr>
+        <tr>
+          <td class="metric-name">http_req_sending</td>
+          <td class="metric-value">0ms</td>
+        </tr>
+        <tr>
+          <td class="metric-name">http_req_waiting</td>
+          <td class="metric-value">260ms</td>
+        </tr>
+        <tr>
+          <td class="metric-name">http_req_receiving</td>
+          <td class="metric-value">0ms</td>
+        </tr>
+        <tr>
+          <td class="metric-name">http_req_failed</td>
+          <td class="metric-value">0.00%</td>
+        </tr>
+        <tr>
+          <td class="metric-name">auth_response_time</td>
+          <td class="metric-value">274</td>
+        </tr>
+        <tr>
+          <td class="metric-name">checks</td>
+          <td class="metric-value">100.00%</td>
+        </tr>
+        <tr>
+          <td class="metric-name">auth_success</td>
+          <td class="metric-value">1</td>
+        </tr>
+        <tr>
+          <td class="metric-name">group_duration</td>
+          <td class="metric-value">2824</td>
+        </tr>
+        <tr>
+          <td class="metric-name">no_auth_response_time</td>
+          <td class="metric-value">261</td>
+        </tr>
+        <tr>
+          <td class="metric-name">data_sent</td>
+          <td class="metric-value">78638</td>
+        </tr>
+        <tr>
+          <td class="metric-name">data_received</td>
+          <td class="metric-value">193809</td>
+        </tr>
+        <tr>
+          <td class="metric-name">iteration_duration</td>
+          <td class="metric-value">8662ms</td>
+        </tr>
+        <tr>
+          <td class="metric-name">iterations</td>
+          <td class="metric-value">71</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="footer">
+      <p>K6 Performance Testing Report</p>
+      <p>Petstore API - https://petstore.swagger.io/v2</p>
+    </div>
+  </div>
+</body>
+
+</html>

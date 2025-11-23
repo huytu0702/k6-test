@@ -1,0 +1,371 @@
+{
+  "generatedAt": "2025-11-23T19:11:05.921Z",
+  "summary": {
+    "totalTests": 6,
+    "totalRequests": 8845,
+    "totalFailedRequests": 4555,
+    "avgErrorRate": 31.036166458137654,
+    "avgResponseTime": 260.65475072126384,
+    "avgChecksPassRate": 95.98534455877768,
+    "maxVus": 30,
+    "totalDataTransferred": 9874602,
+    "tests": {
+      "auth-test": {
+        "duration": 0,
+        "totalRequests": 426,
+        "failedRequests": 0,
+        "requestRate": 7.1,
+        "responseTime": {
+          "min": 236.1162,
+          "avg": 260.1429300469481,
+          "max": 401.7181,
+          "med": 263.2608,
+          "p90": 274.9145,
+          "p95": 278.4393,
+          "p99": 330.3749
+        },
+        "errorRate": 0,
+        "checksPassRate": 100,
+        "vusMax": 5,
+        "dataTransferred": 193809
+      },
+      "data-driven": {
+        "duration": 0,
+        "totalRequests": 195,
+        "failedRequests": 0,
+        "requestRate": 3.25,
+        "responseTime": {
+          "min": 229.0776,
+          "avg": 278.33508051282047,
+          "max": 1193.365,
+          "med": 255.4009,
+          "p90": 264.8449,
+          "p95": 472.732,
+          "p99": 1072.4096
+        },
+        "errorRate": 0,
+        "checksPassRate": 100,
+        "vusMax": 5,
+        "dataTransferred": 6345658
+      },
+      "load-test": {
+        "duration": 0,
+        "totalRequests": 1069,
+        "failedRequests": 515,
+        "requestRate": 17.816666666666666,
+        "responseTime": {
+          "min": 227.3648,
+          "avg": 255.06357885874627,
+          "max": 301.6762,
+          "med": 245.3753,
+          "p90": 274.922,
+          "p95": 275.8494,
+          "p99": 283.3404
+        },
+        "errorRate": 48.175865294667915,
+        "checksPassRate": 75.91206735266604,
+        "vusMax": 10,
+        "dataTransferred": 507804
+      },
+      "spike-test": {
+        "duration": 0,
+        "totalRequests": 3191,
+        "failedRequests": 2040,
+        "requestRate": 53.18333333333333,
+        "responseTime": {
+          "min": 228.2217,
+          "avg": 257.2393726731434,
+          "max": 338.1069,
+          "med": 259.8382,
+          "p90": 275.7274,
+          "p95": 278.2881,
+          "p99": 288.1092
+        },
+        "errorRate": 63.92980256972736,
+        "checksPassRate": 100,
+        "vusMax": 30,
+        "dataTransferred": 1262748
+      },
+      "stress-test": {
+        "duration": 0,
+        "totalRequests": 3539,
+        "failedRequests": 1915,
+        "requestRate": 58.983333333333334,
+        "responseTime": {
+          "min": 226.2673,
+          "avg": 253.70194458886644,
+          "max": 310.9067,
+          "med": 246.2467,
+          "p90": 276.7936,
+          "p95": 278.0561,
+          "p99": 283.819
+        },
+        "errorRate": 54.11133088443063,
+        "checksPassRate": 100,
+        "vusMax": 20,
+        "dataTransferred": 1381755
+      },
+      "workflow-test": {
+        "duration": 0,
+        "totalRequests": 425,
+        "failedRequests": 85,
+        "requestRate": 7.083333333333333,
+        "responseTime": {
+          "min": 226.9926,
+          "avg": 259.44559764705855,
+          "max": 387.4181,
+          "med": 260.4604,
+          "p90": 276.2069,
+          "p95": 278.3565,
+          "p99": 320.9242
+        },
+        "errorRate": 20,
+        "checksPassRate": 100,
+        "vusMax": 5,
+        "dataTransferred": 182828
+      }
+    }
+  },
+  "comparison": [
+    {
+      "test": "auth-test",
+      "requests": 426,
+      "errors": 0,
+      "errorRate": "0.00%",
+      "avgResponseTime": "260.14ms",
+      "p95ResponseTime": "278.44ms",
+      "checksPassRate": "100.00%",
+      "maxVUs": 5,
+      "throughput": "7.10 req/s"
+    },
+    {
+      "test": "data-driven",
+      "requests": 195,
+      "errors": 0,
+      "errorRate": "0.00%",
+      "avgResponseTime": "278.34ms",
+      "p95ResponseTime": "472.73ms",
+      "checksPassRate": "100.00%",
+      "maxVUs": 5,
+      "throughput": "3.25 req/s"
+    },
+    {
+      "test": "load-test",
+      "requests": 1069,
+      "errors": 515,
+      "errorRate": "48.18%",
+      "avgResponseTime": "255.06ms",
+      "p95ResponseTime": "275.85ms",
+      "checksPassRate": "75.91%",
+      "maxVUs": 10,
+      "throughput": "17.82 req/s"
+    },
+    {
+      "test": "spike-test",
+      "requests": 3191,
+      "errors": 2040,
+      "errorRate": "63.93%",
+      "avgResponseTime": "257.24ms",
+      "p95ResponseTime": "278.29ms",
+      "checksPassRate": "100.00%",
+      "maxVUs": 30,
+      "throughput": "53.18 req/s"
+    },
+    {
+      "test": "stress-test",
+      "requests": 3539,
+      "errors": 1915,
+      "errorRate": "54.11%",
+      "avgResponseTime": "253.70ms",
+      "p95ResponseTime": "278.06ms",
+      "checksPassRate": "100.00%",
+      "maxVUs": 20,
+      "throughput": "58.98 req/s"
+    },
+    {
+      "test": "workflow-test",
+      "requests": 425,
+      "errors": 85,
+      "errorRate": "20.00%",
+      "avgResponseTime": "259.45ms",
+      "p95ResponseTime": "278.36ms",
+      "checksPassRate": "100.00%",
+      "maxVUs": 5,
+      "throughput": "7.08 req/s"
+    }
+  ],
+  "issues": [
+    {
+      "severity": "LOW",
+      "test": "auth-test",
+      "issue": "Low Throughput",
+      "value": "7.10 req/s",
+      "threshold": "10 req/s"
+    },
+    {
+      "severity": "LOW",
+      "test": "data-driven",
+      "issue": "Low Throughput",
+      "value": "3.25 req/s",
+      "threshold": "10 req/s"
+    },
+    {
+      "severity": "HIGH",
+      "test": "load-test",
+      "issue": "High Error Rate",
+      "value": "48.18%",
+      "threshold": "5%"
+    },
+    {
+      "severity": "HIGH",
+      "test": "load-test",
+      "issue": "Low Checks Pass Rate",
+      "value": "75.91%",
+      "threshold": "90%"
+    },
+    {
+      "severity": "HIGH",
+      "test": "spike-test",
+      "issue": "High Error Rate",
+      "value": "63.93%",
+      "threshold": "5%"
+    },
+    {
+      "severity": "HIGH",
+      "test": "stress-test",
+      "issue": "High Error Rate",
+      "value": "54.11%",
+      "threshold": "5%"
+    },
+    {
+      "severity": "HIGH",
+      "test": "workflow-test",
+      "issue": "High Error Rate",
+      "value": "20.00%",
+      "threshold": "5%"
+    },
+    {
+      "severity": "LOW",
+      "test": "workflow-test",
+      "issue": "Low Throughput",
+      "value": "7.08 req/s",
+      "threshold": "10 req/s"
+    }
+  ],
+  "rawData": {
+    "auth-test": {
+      "duration": 0,
+      "totalRequests": 426,
+      "failedRequests": 0,
+      "requestRate": 7.1,
+      "responseTime": {
+        "min": 236.1162,
+        "avg": 260.1429300469481,
+        "max": 401.7181,
+        "med": 263.2608,
+        "p90": 274.9145,
+        "p95": 278.4393,
+        "p99": 330.3749
+      },
+      "errorRate": 0,
+      "checksPassRate": 100,
+      "vusMax": 5,
+      "dataTransferred": 193809
+    },
+    "data-driven": {
+      "duration": 0,
+      "totalRequests": 195,
+      "failedRequests": 0,
+      "requestRate": 3.25,
+      "responseTime": {
+        "min": 229.0776,
+        "avg": 278.33508051282047,
+        "max": 1193.365,
+        "med": 255.4009,
+        "p90": 264.8449,
+        "p95": 472.732,
+        "p99": 1072.4096
+      },
+      "errorRate": 0,
+      "checksPassRate": 100,
+      "vusMax": 5,
+      "dataTransferred": 6345658
+    },
+    "load-test": {
+      "duration": 0,
+      "totalRequests": 1069,
+      "failedRequests": 515,
+      "requestRate": 17.816666666666666,
+      "responseTime": {
+        "min": 227.3648,
+        "avg": 255.06357885874627,
+        "max": 301.6762,
+        "med": 245.3753,
+        "p90": 274.922,
+        "p95": 275.8494,
+        "p99": 283.3404
+      },
+      "errorRate": 48.175865294667915,
+      "checksPassRate": 75.91206735266604,
+      "vusMax": 10,
+      "dataTransferred": 507804
+    },
+    "spike-test": {
+      "duration": 0,
+      "totalRequests": 3191,
+      "failedRequests": 2040,
+      "requestRate": 53.18333333333333,
+      "responseTime": {
+        "min": 228.2217,
+        "avg": 257.2393726731434,
+        "max": 338.1069,
+        "med": 259.8382,
+        "p90": 275.7274,
+        "p95": 278.2881,
+        "p99": 288.1092
+      },
+      "errorRate": 63.92980256972736,
+      "checksPassRate": 100,
+      "vusMax": 30,
+      "dataTransferred": 1262748
+    },
+    "stress-test": {
+      "duration": 0,
+      "totalRequests": 3539,
+      "failedRequests": 1915,
+      "requestRate": 58.983333333333334,
+      "responseTime": {
+        "min": 226.2673,
+        "avg": 253.70194458886644,
+        "max": 310.9067,
+        "med": 246.2467,
+        "p90": 276.7936,
+        "p95": 278.0561,
+        "p99": 283.819
+      },
+      "errorRate": 54.11133088443063,
+      "checksPassRate": 100,
+      "vusMax": 20,
+      "dataTransferred": 1381755
+    },
+    "workflow-test": {
+      "duration": 0,
+      "totalRequests": 425,
+      "failedRequests": 85,
+      "requestRate": 7.083333333333333,
+      "responseTime": {
+        "min": 226.9926,
+        "avg": 259.44559764705855,
+        "max": 387.4181,
+        "med": 260.4604,
+        "p90": 276.2069,
+        "p95": 278.3565,
+        "p99": 320.9242
+      },
+      "errorRate": 20,
+      "checksPassRate": 100,
+      "vusMax": 5,
+      "dataTransferred": 182828
+    }
+  }
+}
